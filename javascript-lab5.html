@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<p><b><u><h1> KHUSHNUM R. WADIA</h1>
+<h1>A059</h1></u></b></p>
+
+<script type="text/javascript">
+var a=new Array();
+var b=new Array();
+a=[32,64,12,892,126,5];
+b=[48,36,59,126,759,30,64,52];
+console.log(a);
+console.log(b);
+operation_performer(a,b,'+');
+operation_performer(a,b,'-');
+function operation_performer(a,b,operator)
+{
+    if (operator=='+') 
+    {
+        console.log("Operator used: "+operator);
+        var x1=find_largest(a);
+        var x2=find_largest(b);
+        console.log("Largest number of array A is "+x1);
+        console.log("Largest number of array B is "+x2);
+        console.log("The sum of the largest two numbers of the two arrays is : "+(x1+x2));
+    }
+    else if (operator=='-') 
+    {
+        console.log("Operator used: "+operator);
+        var x1=find_lowest(a);
+        var x2=find_lowest(b);
+        console.log("Smallest number of array A is "+x1);
+        console.log("Smallest number of array B is "+x2);
+        if(x1>x2)
+            console.log("The difference between the smallest two numbers of the two arrays is :"+(x1-x2));
+        else
+            console.log("The difference between the smallest two numbers of the two arrays is : "+(x2-x1));
+    }
+}
+function find_lowest(a)
+{
+    var x=a[0];
+    for (var i = a.length - 1; i >= 0; i--) 
+    {
+        if(a[i]<x)
+        {
+            x=a[i];
+        }
+    }
+    return x;
+}
+function find_largest(a)
+{
+    var x=a[0];
+    for (var i = a.length - 1; i >= 0; i--) 
+    {
+        if(a[i]>x)
+        {
+            x=a[i];
+        }
+    }
+    return x;
+}
+</script>
+</body>
+</html>
