@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find GCF</title>
+</head>
+<body>
+
+<form name="form1">
+First Number:<input type="text" name="text1" >
+<br>
+<br>
+Second Number:<input type="text" name="text2">
+<br>
+<br>
+<input type="button" value="Find GCF" onclick="go()">
+<input type="text" name="answer"> is the Greatest Common Factor (GCF)
+</form>
+
+<script>
+function go(){
+var text1=eval(document.form1.text1.value)
+var text2=eval(document.form1.text2.value)
+
+var max1=Math.max(text1,text2)
+for (i=-max1;i<=max1;i=i+1){
+var a=text1/i
+var b=Math.floor(a)
+var c=a-b
+if (c==0){
+var first=1
+}
+else {
+var first=0
+}
+var a=text2/i
+var b=Math.floor(a)
+var c=a-b
+if (c==0){
+var second=1
+}
+else {
+var second=0
+}
+if ((first==1)&&(second==1)){
+
+document.form1.answer.value=i
+}
+else{}
+
+}
+}
+</script>
+
+</body>
+</html>
+
