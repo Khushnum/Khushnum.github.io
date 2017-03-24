@@ -1,0 +1,11 @@
+{
+	"name1" : "ABC",
+	"course1" : "Web Programming",
+	"attendance1lab" : "100%",
+	"attendance1theory" : "83%",
+	"name2" : "XYZ",
+	"course2" : "DataBase Management Systems",
+	"attendance2" : "76%",
+	"attendance2theory" : "63%",
+
+}
